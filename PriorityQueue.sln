@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue.UnitTests", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue.Console", "PriorityQueue.Console\PriorityQueue.Console.csproj", "{242E8781-06FC-4B71-B499-CC20BA9C13C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PriorityQueue", "PriorityQueue\PriorityQueue.csproj", "{A151D624-73B2-4030-8882-672A819969EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PQueue", "PriorityQueue\PQueue.csproj", "{A151D624-73B2-4030-8882-672A819969EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
