@@ -8,12 +8,22 @@ namespace PQueue
 {
     public class PriorityQueue<T>
     {
-        public void Add(string v)
+        public void Enqueue(string v)
         {
             throw new NotImplementedException();
         }
 
         public double Count()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Dequeue()
+        {
+            throw new NotImplementedException();
+        }
+
+        public T Peek()
         {
             throw new NotImplementedException();
         }
