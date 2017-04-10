@@ -96,6 +96,28 @@ namespace PriorityQueue.UnitTests
             Assert.AreEqual("test2", result2);
         }
 
+        [TestCase("test", "test9", "test", "test2", "test3", "test4", "test5", "test6", "test7", "test8", "test9")]
+        [TestCase("a1", "a", "a1", "b", "c", "d", "a")]
+        public void Queue_Dequeue_CheckResultOrdering(string first, string last, params string[] queueItems)
+        {
+            // Arrange
+            PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
+            foreach (string item in queueItems)
+            {
+                queue.Enqueue(item);             
+            }
+
+            // Act
+            string resultFirst = queue.Peek();
+            string resultLast = string.Empty;
+            while (queue.Peek() != null)
+                resultLast = queue.Dequeue();
+
+            // Assert
+            Assert.AreEqual(first, resultFirst);
+            Assert.AreEqual(last, resultLast);
+        }
+
         [Test]
         public void Queue_DequeueEmpty_CheckNull()
         {
