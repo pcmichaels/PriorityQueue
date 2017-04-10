@@ -8,6 +8,19 @@ namespace PriorityQueue.UnitTests
     public class BasicQueueTest
     {
         [Test]
+        public void Queue_NoEntries_CheckCount()
+        {
+            // Arrange
+            PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
+
+            // Act
+            int count = queue.Count();
+
+            // Assert
+            Assert.AreEqual(0, count);
+        }
+
+        [Test]
         public void Queue_Add_CheckCount()
         {
             // Arrange

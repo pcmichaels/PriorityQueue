@@ -8,19 +8,31 @@ namespace PQueue
 {
     public class PriorityQueue<T>
     {
-        public void Enqueue(string v)
+        private List<T> _list;
+
+        public PriorityQueue()
         {
-            throw new NotImplementedException();
+            _list = new List<T>();
         }
 
-        public double Count()
+        public void Enqueue(T newItem)
         {
-            throw new NotImplementedException();
+            _list.Add(newItem);
+        }
+
+        public int Count()
+        {
+            return _list.Count();
         }
 
         public T Dequeue()
         {
-            throw new NotImplementedException();
+            T item = _list.FirstOrDefault();
+            if (item == null) return default(T);
+
+            _list.Remove(item);
+
+            return item;
         }
 
         public T Peek()
