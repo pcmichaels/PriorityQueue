@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PQueue
 {
@@ -37,7 +34,7 @@ namespace PQueue
 
         public T Peek()
         {
-            throw new NotImplementedException();
+            return _list.FirstOrDefault();
         }
     }
 }
