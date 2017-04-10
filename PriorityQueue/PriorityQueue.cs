@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace PQueue
@@ -20,6 +21,11 @@ namespace PQueue
         public int Count()
         {
             return _list.Count();
+        }
+
+        public void Enqueue(string v1, int v2)
+        {
+            throw new NotImplementedException();
         }
 
         public T Dequeue()
