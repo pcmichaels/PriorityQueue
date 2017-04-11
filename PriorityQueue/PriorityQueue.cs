@@ -71,7 +71,10 @@ namespace PQueue
         public T Dequeue()
         {
             ListItemEntry entry = _list.OrderBy(a => a.Priority).FirstOrDefault();
-            if (entry == null) return default(T);
+            if (entry == null)
+            {
+                throw new InvalidOperationException("Queue contains no elements");
+            }
 
             _list.Remove(entry);
 

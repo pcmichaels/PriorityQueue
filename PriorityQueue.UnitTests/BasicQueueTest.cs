@@ -133,19 +133,5 @@ namespace PriorityQueue.UnitTests
             Assert.AreEqual(first, resultFirst);
             Assert.AreEqual(last, resultLast);
         }
-
-        [Test]
-        public void Queue_DequeueEmpty_CheckNull()
-        {
-            // Arrange
-            PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
-
-            // Act
-            var result = queue.Dequeue();
-
-            // Assert
-            Assert.IsNull(result);
-        }
-
     }
 }
