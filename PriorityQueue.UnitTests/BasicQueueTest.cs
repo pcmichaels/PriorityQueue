@@ -19,7 +19,7 @@ namespace PriorityQueue.UnitTests
             // Assert
             Assert.AreEqual(0, count);
         }
-
+    
         [Test]
         public void Queue_Add_CheckCount()
         {
