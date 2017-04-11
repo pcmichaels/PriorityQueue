@@ -51,7 +51,7 @@ namespace PQueue
             if (_list.Count() != 0)
             {
                 _list.Where(a => a.Priority >= priority).ToList().ForEach(b => b.Priority++);
-                int highestPriority = GetHighestPriority();
+                int highestPriority = NewMethod();
                 if (highestPriority >= _highestPriority)
                     _highestPriority = highestPriority + 1;
             }
@@ -62,7 +62,7 @@ namespace PQueue
             _list.Add(li);
         }
 
-        private int GetHighestPriority()
+        private int NewMethod()
         {
             return _list.OrderByDescending(a => a.Priority).FirstOrDefault().Priority;
         }
