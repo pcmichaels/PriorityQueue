@@ -19,7 +19,23 @@ namespace PriorityQueue.UnitTests
             // Assert
             Assert.AreEqual(0, count);
         }
-    
+
+        [Test]
+        public void Queue_NoEntriesDequeue_ThrowsException()
+        {
+            void DequeueNoEntries()
+            {
+                // Arrange
+                PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
+
+                // Act
+                string result = queue.Dequeue();
+            }
+
+            // Assert
+            Assert.Throws(typeof(InvalidOperationException), DequeueNoEntries);
+        }
+
         [Test]
         public void Queue_Add_CheckCount()
         {
