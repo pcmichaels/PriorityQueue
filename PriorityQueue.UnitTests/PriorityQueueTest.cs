@@ -25,6 +25,41 @@ namespace PriorityQueue.UnitTests
             Assert.AreEqual("test", result2);
 
         }
-        
+
+        [Test]
+        public void TestConflictingPriority()
+        {
+            PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
+            queue.Enqueue("test", 2);
+            queue.Enqueue("test2", 2);
+
+            // Act
+            var result = queue.Dequeue();
+            var result2 = queue.Dequeue();
+
+            // Assert
+            Assert.AreEqual("test", result);
+            Assert.AreEqual("test2", result2);
+
+        }
+
+        [Test]
+        public void TestMixedPriotyAndQueue()
+        {
+            PQueue.PriorityQueue<string> queue = new PQueue.PriorityQueue<string>();
+            queue.Enqueue("test3");
+            queue.Enqueue("test", 2);
+            queue.Enqueue("test2", 2);            
+
+            // Act
+            var result = queue.Dequeue();
+            var result2 = queue.Dequeue();
+
+            // Assert
+            Assert.AreEqual("test3", result);
+            Assert.AreEqual("test", result2);
+
+        }
+
     }
 }
